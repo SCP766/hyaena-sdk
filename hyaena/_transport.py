@@ -25,7 +25,7 @@ class AsyncTransport:
     """
 
     def __init__(self, dsn: str) -> None:
-        self._ingest_url = dsn.rstrip("/") + "/v1/ingest"
+        self._ingest_url = dsn.rstrip("/") + "/v1/"
         self._client: httpx.AsyncClient | None = None
 
     async def start(self) -> None:
